@@ -23,12 +23,6 @@ testMsg2 = testTemplate2.render(name = 'WontTouch')
 
 print(testMsg2, end="\n\n")
 
-# stop for a minute, i can create a html page
-#link = ''' Just a link <a href=#>Yeah that's a link</a>'''
-#aPage = Template(link)
-#rendPage = aPage.render()
-# maybe i can, but i don't know how to open this /\
-
 link = ''' Just a link <a href=#>Yeah that's a link</a>'''
 aPage = Template("{{ link | e }}") # flag e mean escape for <> simbols
 rendPage = aPage.render(link = link)
@@ -53,6 +47,3 @@ listTempl = Template(listHumans)
 listMessage = listTempl.render(humans = humans)
 
 print(listMessage, end="\n\n")
-
-#escMsg = escape(link) <-- wont work 
-#print(escSmg)
